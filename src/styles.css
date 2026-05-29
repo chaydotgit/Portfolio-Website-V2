@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&family=Shippori+Mincho+B1&display=swap');
+
+body {
+  background-color: #5B6C3B;
+  font-family: 'Shippori+Mincho+B1', serif;
+  color: white;
+}/* You can add global styles to this file, and also import other style files */
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.fade-in-hidden {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+a, a:link, a:visited, a:-webkit-any-link {
+  color: #c7ff8d;
+}

@@ -1,12 +1,15 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {LandingComponent} from './landing/landing.component';
+import {About} from './about/about';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [LandingComponent, About],
   templateUrl: './app.html',
+  standalone: true,
   styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('chayanne-website');
+  protected readonly scrollTo = scrollTo;
 }

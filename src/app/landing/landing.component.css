@@ -1,0 +1,75 @@
+.name-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+}
+
+.social {
+  color: white !important;
+}
+
+.profile-ring {
+  position: relative;
+  width: 285px;
+  height: 285px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+}
+
+.profile-ring__image {
+  position: relative;
+  z-index: 2;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-ring__line {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border: 2px solid rgb(255, 255, 255);
+  pointer-events: none;
+  transition: 0.5s;
+  filter: blur(0.15px) drop-shadow(0 0 6px rgba(255, 255, 255, 0.16));
+}
+
+.profile-ring__line--1 {
+  border-radius: 38% 65% 75% 37% / 41% 44% 56% 59%;
+  animation: profile-ring-spin 6s linear infinite;
+}
+
+.profile-ring__line--2 {
+  border-radius: 31% 34% 30% 49% / 28% 52% 53% 27%;
+  animation: profile-ring-spin 4s linear infinite;
+}
+
+.profile-ring__line--3 {
+  border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%;
+  animation: profile-ring-spin-reverse 10s linear infinite;
+}
+
+@keyframes profile-ring-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes profile-ring-spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
